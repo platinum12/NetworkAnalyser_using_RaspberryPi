@@ -1,0 +1,62 @@
+package com.eurekabits;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.annotation.Generated;
+
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@Generated("org.jsonschema2pojo")
+@JsonPropertyOrder({ "packet" })
+public class Packet {
+
+	@JsonProperty("packet")
+	private Packet_ packet;
+	@JsonIgnore
+	private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+
+	/**
+	 * 
+	 * @return The packet
+	 */
+	@JsonProperty("packet")
+	public Packet_ getPacket() {
+		return packet;
+	}
+
+	/**
+	 * 
+	 * @param packet
+	 *            The packet
+	 */
+	@JsonProperty("packet")
+	public void setPacket(Packet_ packet) {
+		this.packet = packet;
+	}
+
+	@JsonAnyGetter
+	public Map<String, Object> getAdditionalProperties() {
+		return this.additionalProperties;
+	}
+
+	@JsonAnySetter
+	public void setAdditionalProperty(String name, Object value) {
+		this.additionalProperties.put(name, value);
+	}
+
+	public void setAdditionalProperties(Map<String, Object> additionalProperties) {
+		this.additionalProperties = additionalProperties;
+	}
+
+	@Override
+	public String toString() {
+		return "Packet [packet=" + packet + "]";
+	}
+}
